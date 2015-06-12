@@ -320,12 +320,28 @@
             <span class="tile-group-title">Instructors</span>
             <div class="tile-container">
                 <a href="test1.php">
-                    <div class="tile-wide bg-cyan fg-white" data-role="tile">
+                    <div class="tile bg-cyan fg-white" data-role="tile">
                         <div class="tile-content iconic">
                             <img src="icon/school84.png">
                         </div>
                         <span class="tile-label">Instructors</span>
                     </div>
+                </a>
+                <a href="ins_salary.php">
+                <div class="tile bg-darkGreen fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <img src="icon/teacher44.png">
+                    </div>
+                    <span class="tile-label">Inst. attendance</span>
+                </div>
+                </a>
+                <a href="ins_salary.php">
+                <div class="tile bg-amber fg-white" data-role="tile">
+                    <div class="tile-content iconic">
+                        <img src="icon/teacher44.png">
+                    </div>
+                    <span class="tile-label">Inst. Search</span>
+                </div>
                 </a>
                 <a href="ins_salary.php">
                 <div class="tile bg-darkGreen fg-white" data-role="tile">
@@ -342,17 +358,35 @@
         <div class="tile-group double">
             <span class="tile-group-title">Courses</span>
             <div class="tile-container">
-                <div class="tile-wide bg-orange fg-white" data-role="tile">
-                    <div class="tile-content iconic">
-                        <img src="icon/books30.png">
+                <a href="course_mgt.php">
+                    <div class="tile bg-orange fg-white" data-role="tile">
+                        <div class="tile-content iconic">
+                            <img src="icon/books30.png">
+                        </div>
+                        <span class="tile-label">Course Mgt</span>
                     </div>
-                    <span class="tile-label">Course Mgt</span>
-                </div>
+                </a> 
+                <a href="course_mgt.php">
+                    <div class="tile bg-indigo fg-white" data-role="tile">
+                        <div class="tile-content iconic">
+                            <img src="icon/books30.png">
+                        </div>
+                        <span class="tile-label">Search Course</span>
+                    </div>
+                </a> 
+                <a href="course_mgt.php">
+                    <div class="tile bg-orange fg-white" data-role="tile">
+                        <div class="tile-content iconic">
+                            <img src="icon/books30.png">
+                        </div>
+                        <span class="tile-label">New Course</span>
+                    </div>
+                </a> 
                 <div class="tile bg-indigo fg-white" data-role="tile">
                     <div class="tile-content iconic">
                         <img src="icon/ask3.png">
                     </div>
-                    <span class="tile-label">Progress</span>
+                    <span class="tile-label">Update Course</span>
                 </div>
             </div>    
         </div>
@@ -374,6 +408,14 @@
                             
                         </div>
                         <span class="tile-label">TEST2</span>
+                    </div>
+                </a>
+                <a href="stud_attendence_report.php">
+                    <div class="tile bg-indigo fg-white" data-role="tile">
+                        <div class="tile-content iconic">
+                            
+                        </div>
+                        <span class="tile-label">individual attendance report</span>
                     </div>
                 </a>
             </div>    
