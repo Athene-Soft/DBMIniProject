@@ -1,0 +1,24 @@
+--mysqli approach--
+
+Please follow these steps, this will help us when are to debug the our codes.
+
+//1.connection
+$conn = new mysqli ("myServer","myUser","myPassword","dbName");
+
+//2.write the query
+$query="SELECT CompanyName, City, Country FROM Customers"
+
+//3.submit the query
+$result= $conn->query($query);
+
+//4.retrieving data from "$result" object to another object (here we use $rs variable, meaning "result set")
+//according a desired format (here we retrieve data from $result to $rs as an associative array)
+$rs= $result->fetch_array(MYSQLI_ASSOC); //Malmee see online php docs for more infor on fetch_array() method
+
+//5.close the connection
+$conn-> close();
+
+NOTE: in steps 1 to 4 please add error checks and if there is any error, as assign the error to a
+separate variable for later consideration in the code when needed.
+
+cheers...happy coding :) 
