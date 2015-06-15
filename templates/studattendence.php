@@ -1,5 +1,29 @@
 <?php include("includes/header.php");  ?>
-    
+
+ <script>
+        function getStudentInfo(str){
+            if (str==""){
+            document.getElementById("_margin20").innerHTML="";
+            return;
+            }
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function(){
+                if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById("myForm").innerHTML="";
+                document.getElementById("_margin20").innerHTML=xmlhttp.responseText;
+                }
+            }
+        xmlhttp.open("GET","getstudattend.php?q="+str,true);
+        xmlhttp.send();
+        }
+</script>
 
     <div class="charm right-side padding20 bg-grayDark" id="charmSettings">
         <button class="square-button bg-transparent fg-white no-border place-right small-button" onclick="showSettings()"><span class="mif-cross"></span></button>
@@ -54,19 +78,25 @@
                                 <div class="place-left">
                                     <div class="input-control text" data-role="input">
                                     <label>ID No.</label>
-                                    <input type="text">
+                                    <input type="text" id="student_id">
                                     </div>
                                 </div>
                                 <div class="place-right" >
-                                    <input type="submit" value="OK" name="submit">
+                                    <!-- <input type="submit" value="OK" name="submit"> -->
+                                    <input type="button" value="OK" onclick="getStudentInfo(student_id.value)">
                                 </div>
+                                <br>
+                                <div id = "myForm" class="place-left"> There is No such a student </div>
                         <br>    
                         <br>
                         <br>
-                        <div class="margin20">
-                            <div><label>Name:</label><label style="margin-left:10px">VALUE</label></div> 
+                        
+                        <div class="margin20" id="_margin20">
+                            
+                            <div><label>Name:</label><label style="margin-left:10px"> </label></div> 
                             <br>
-                            <div><label>Grade:</label><label style="margin-left:10px">VALUE</label></div> 
+                            <div><label>Grade:</label><label style="margin-left:10px"> </label></div> 
+                             
                         </div>
                         <div style="margin-top: 15%">
                             <div>
@@ -77,6 +107,7 @@
                                 <button class="place-left">Student's Attendance</button>
                             </div>
                         </div>
+                        
                     </div>
                     
                     <div class="cell colspan1" style="float: left">
